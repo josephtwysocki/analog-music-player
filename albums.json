@@ -1,0 +1,17 @@
+{
+  "black_on_both_sides": {
+    "artist": "Mos Def",
+    "album": "Black on Both Sides",
+    "spotify_uri": "spotify:album:5gK2l2LgWY0BA4p9uy27z6"
+  },
+  "kind_of_blue": {
+    "artist": "Miles Davis",
+    "album": "Kind of Blue",
+    "spotify_uri": "spotify:album:1weenld61qoidwYuZ1GESA"
+  },
+  "dark_side_of_the_moon": {
+    "artist": "Pink Floyd",
+    "album": "Dark Side of the Moon",
+    "spotify_uri": "spotify:album:4LH4d3cOWNNsVw41Gqt2kv"
+  }
+}
