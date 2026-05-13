@@ -13,5 +13,15 @@
     "artist": "Pink Floyd",
     "album": "Dark Side of the Moon",
     "spotify_uri": "spotify:album:4LH4d3cOWNNsVw41Gqt2kv"
+  },
+  "by_and_by": {
+    "artist": "Caamp",
+    "album": "By and By",
+    "spotify_uri": "spotify:album:1wohWQ8y4RpdANgxZDa4MF"
+  },
+  "rumours": {
+    "artist": "Fleetwood Mac",
+    "album": "Rumours",
+    "spotify_uri": "spotify:album:1bt6q2SruMsBtcerNVtpZB"
   }
 }
