@@ -61,6 +61,14 @@ def play_album(sp, album_uri, device_id):
     )
 
 
-def stop_playback(sp):
+def stop_playback(sp, device_id=None):
+    if device_id:
+        sp.pause_playback(device_id=device_id)
+    else:
+        sp.pause_playback()
 
-    sp.pause_playback()
+def resume_playback(sp, device_id=None):
+    if device_id:
+        sp.start_playback(device_id=device_id)
+    else:
+        sp.start_playback()
