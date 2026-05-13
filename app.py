@@ -36,6 +36,11 @@ def main():
         action="store_true"
     )
 
+    # Temporary argument for simulating NFC tag input
+    parser.add_argument(
+        "--tag", 
+        help="Simulated NFC tag ID")
+    
     args = parser.parse_args()
 
     sp = get_spotify()
@@ -53,6 +58,39 @@ def main():
 
             print(f"{d['name']} ({d['type']}) {active}")
 
+        return
+    
+    # Check NFC tag
+    if args.tag:
+        from nfc import get_album_for_tag
+
+        try:
+            album_key, album = get_album_for_tag(args.tag)
+        except Exception as e:
+            print(e)
+            return
+
+        print("\nNFC tag matched:")
+        print(f"Tag: {args.tag}")
+        print(f"Album key: {album_key}")
+        print(f"{album['artist']} - {album['album']}")
+
+        try:
+            device = get_target_device(sp, args.device)
+        except Exception as e:
+            print(e)
+            return
+
+        print(f"\nTarget device: {device['name']}")
+        print("\nStarting playback...")
+
+        try:
+            play_album(sp, album["spotify_uri"], device["id"])
+        except Exception as e:
+            print("Playback failed:", e)
+            return
+
+        print("\nDone.")
         return
 
     # Stop playback
